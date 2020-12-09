@@ -7,11 +7,20 @@ description: Blog post for EE 380L Data Mining Project
 
 * \[Header Picture\]
 
-# Audio-Visual Speech Separation
+<p align="justify">
+ 
+# Speech Separation using Audio-Visual Features
+Alexander Fiore, Alexander Phillips, Arivarasi Kesawaram, Dae Yeol Lee, Dan Jacobellis
 
-* \[Team members\]
+</p>
 
-* \[Abstract: 1-2 Paragraphs\]
+[comment]: # (Abstract: 1-2 Paragraphs)
+
+The visual component of human speech provides rich information about the acoustic signal that can be exploited for source separation. For our project, we train a model to estimate the time-frequency audio mask that separates two speakers in a single channel recording that utilizes the visual information of the speech. Over 5000 videos were retreived from the [AVspeech][2] dataset and combined into pairs to form speech mixtures and ground truth labels. To our knowledge, this project is the first publicly available end-to-end implementation of the [state of the art speech separation model developed by google research][1].
+
+[1]:https://looking-to-listen.github.io
+[2]:https://looking-to-listen.github.io/avspeech/
+
 * \[Introduction & Background (all items should be high level overviews)\]
   * \[Problem being addressed and why it’s important\]
   * \[Related work\]
