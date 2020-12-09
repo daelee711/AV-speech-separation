@@ -4,8 +4,8 @@ title: Blog Post
 tagline: Speech Separation using Audio-Visual Features
 description: Blog post for EE 380L Data Mining Project
 ---
-
-* \[Header Picture\]
+<table style="border:none"><td align="center" style="border:none"> 
+<img src="img/cocktail.jpg"></td></table>
 
 ***Alexander Fiore, Alexander Phillips, Arivarasi Kesawaram, Dae Yeol Lee, Dan Jacobellis***
 
