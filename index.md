@@ -37,6 +37,24 @@ A variant of the structural similarity measure used in image quality assessment 
   * \[Relevant Characteristics\]
   * \[Source(s)\]
   * \[Methods of acquisition\]
+  
+# Audio Features
+The STFT (Short-time fourier transform), was chosen to represent the audio as a joint time-frequency distribution. The STFT is one of the simplest ways to construct a time-frequency distribution and is ubiquitous for audio signal processing. It is constructed by taking the discrete fourier transform (DFT) over a sliding time window. For example, you might take the DFT over a 10 ms window, giving you an estimate of the signal spectrum locally for that 10 ms window, then repeat this for successive windows to construct a matrix.
+
+![STFT](/img/stft.png)
+
+Usually the magnitude of the DFT values are used, in which case it is called the magnitude spectrogram, but in our case we have left the signal as separate real and imaginary parts which allows the inverse operation to be performed to exactly recover the original signal.
+
+![STFT](/img/real_imag.png)
+
+The motivation for applying a time frequency transform is its effect on the sparsity of the signal, which in turn affects separability. For speech in particular, where the primary signal is produced by vibration of the vocal folds, a large fraction of the energy is concentrated at the fundamental frequency of the vibration and its harmonics. These frequencies change over time, which is why a joint representation is necessary, but result is that the important information characterizing the speech is contained in a small area of the distribution, making it easy to isolate.
+
+Historically, speech separation is usually performed by defining the ideal mask in terms of just the magnitude spectrogram. Recent work has demonstrated better results can be achieved using a complex mask.
+
+Range compression of the audio helps stabilize the training of the network by preventing outlying values from dominating the gradient. Usually a spectrogram is viewed in decibels which compresses its range, but since we’ve left the values as complex and can be negative, we instead compress the range using a hyperbolic tangent.
+
+  
+  
 * \[Data Pre-Processing & Exploration\]
   * \[Feature engineering/selection\]
   * \[Relevant Plots\]
