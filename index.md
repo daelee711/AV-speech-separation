@@ -6,6 +6,7 @@ description: Blog post for EE 380L Data Mining Project
 ---
 
 ***Alexander Fiore, Alexander Phillips, Arivarasi Kesawaram, Dae Yeol Lee, Dan Jacobellis***
+dae: test edit
 
 ![Cocktail Party Effect](/img/cocktail.png)
 
