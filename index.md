@@ -47,7 +47,7 @@ Usually the magnitude of the DFT values are used, in which case it is called the
 
 ![STFT](/img/real_imag.png)
 
-<audio controls autoplay src="https://danjacobellis.github.io/AV-speech-separation/audio/ideal_stream0.wav" type="audio/wav">
+<audio controls src="https://danjacobellis.github.io/AV-speech-separation/audio/ideal_stream0.wav" type="audio/wav">
 
 The motivation for applying a time frequency transform is its effect on the sparsity of the signal, which in turn affects separability. For speech in particular, where the primary signal is produced by vibration of the vocal folds, a large fraction of the energy is concentrated at the fundamental frequency of the vibration and its harmonics. These frequencies change over time, which is why a joint representation is necessary, but result is that the important information characterizing the speech is contained in a small area of the distribution, making it easy to isolate.
 
