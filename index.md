@@ -11,7 +11,7 @@ description: Blog post for EE 380L Data Mining Project
 
 [comment]: # (Abstract: 1-2 Paragraphs)
 
-The visual component of human speech provides rich information about the acoustic signal that can be exploited for source separation. For our project, we train a model to estimate the time-frequency audio mask that separates two speakers in a single channel recording that utilizes the visual information of the speech. Over 5000 videos were retreived from the [AVspeech][2] dataset and combined into pairs to form speech mixtures and ground truth labels. To our knowledge, this project is the first publicly available end-to-end implementation of the [state of the art speech separation model developed by google research][1].
+The visual component of human speech provides rich information about the acoustic signal that can be exploited for source separation. For our project, we train a model to estimate the time-frequency audio mask that separates two speakers in a single channel recording that utilizes the visual information of the speech. Over 5000 videos were retrieved from the [AVspeech][2] dataset and combined into pairs to form speech mixtures and ground truth labels. To our knowledge, this project is the first publicly available end-to-end implementation of the [state of the art speech separation model developed by google research][1].
 
 [comment]: # (Introduction & Background / Problem being addressed and why it’s important / Related work / approach and rationale / contribution or novel characteristics)
 
@@ -31,7 +31,7 @@ The visual pre-processing consists of (1) a face detection model, (2) rejection 
 
 YouTube videos referenced by URLs in the AVspeech dataset were downloaded and preprocessed in pairs to generate training data corresponding to a two-speaker scenario. The final model was trained on approximately 2500 mixtures from 5000 YouTube videos containing unique speakers
 
-A variant of the structural similarty measure used in image quality assesment was used as the loss between the predicted and ideal audio masks during the training. The network was trained using a consumer GPU on a personal workstation iterating over the full dataset in several epochs. It produces speech separation masks which show some similarity to the ideal masks, but the error remains quite high judging by listening to the reconstructed audio streams.
+A variant of the structural similarity measure used in image quality assessment was used as the loss between the predicted and ideal audio masks during the training. The network was trained using a consumer GPU on a personal workstation iterating over the full dataset in several epochs. It produces speech separation masks which show some similarity to the ideal masks, but the error remains quite high judging by listening to the reconstructed audio streams.
 
 * \[Data Collection/Description\]
   * \[Relevant Characteristics\]
